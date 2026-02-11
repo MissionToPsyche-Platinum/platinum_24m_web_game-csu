@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f59818fb607a6b54795713e6f48d35cb
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - drillPrefab: {fileID: 3065807654522095085, guid: 42681f9ce36a08f43b85ae468c048f34, type: 3}
+  - drillSpawnPoint: {instanceID: 0}
+  - slotManager: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

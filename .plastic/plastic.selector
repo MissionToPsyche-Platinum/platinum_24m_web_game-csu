@@ -1,0 +1,4 @@
+repository "Space Mining 2026-02-01_20-16-02/Space Mining@2475921411413@cloud"
+  path "/"
+    br "/main"
+    co "/main"
