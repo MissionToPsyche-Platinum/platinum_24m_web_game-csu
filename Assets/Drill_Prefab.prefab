@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 69346349520185917}
   - component: {fileID: 4152455908634303106}
   - component: {fileID: 5951207872713366524}
+  - component: {fileID: 8911620643443139742}
   m_Layer: 0
   m_Name: Drill_Prefab
   m_TagString: Untagged
@@ -154,6 +155,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 2.92, y: 4.94}
   m_EdgeRadius: 0
+--- !u!114 &8911620643443139742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3065807654522095085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e49d3c71c21bfa46a263ba833d174da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Drill
+  level: 1
+  generationInterval: 4
+  materialPerTick: 3
+  depthLevel: 1
+  speedUpgradeCost: 10
+  depthUpgradeCost: 15
 --- !u!1 &3548778751554005074
 GameObject:
   m_ObjectHideFlags: 0

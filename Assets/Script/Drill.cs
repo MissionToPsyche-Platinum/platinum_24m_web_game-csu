@@ -2,26 +2,45 @@ using UnityEngine;
 
 public class Drill : MonoBehaviour
 {
-    //Production: ALL NUMBERS HERE ARE PLACE HOLDERSU NTIL THE GAME IS BALANCED
-    public int amountPerTick = 3;
-    public float secondsPerTick = 4f;
+    public int level = 1;
 
-    //levels
-    public int speedLevel = 1;
-    public int amountLevel = 1;
+    // Speed upgrade
+    public float generationInterval = 4f; // seconds
+    public int materialPerTick = 3;
+
+    // Depth / range upgrade
+    public int depthLevel = 1;
+
+    // Upgrade costs 
+    public int speedUpgradeCost = 10;
+    public int depthUpgradeCost = 15;
 
     public void UpgradeSpeed()
     {
-        speedLevel++;
-        secondsPerTick *= 0.85f; // faster each upgrade
-        secondsPerTick = Mathf.Max(0.5f, secondsPerTick); // cap
+        if (!CanAfford(speedUpgradeCost)) return;
+
+        SpendResources(speedUpgradeCost);
+        level++;
+        generationInterval *= 0.9f; 
+        materialPerTick += 1;
+        speedUpgradeCost += 10;
     }
 
-    public void UpgradeAmount()
+    public void UpgradeDepth()
     {
-        amountLevel++;
-        amountPerTick += 2;
+        if (!CanAfford(depthUpgradeCost)) return;
+        SpendResources(depthUpgradeCost);
+        depthLevel++;
+        depthUpgradeCost += 15;
     }
 
+    bool CanAfford(int cost)
+    {
+        return true;
+    }
+
+    void SpendResources(int cost)
+    {
+    }
 }
 
