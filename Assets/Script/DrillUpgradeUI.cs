@@ -38,7 +38,7 @@ public class DrillUpgradeUI : MonoBehaviour
         speedLevelText.text = $"SPEED LEVEL: {currentDrill.level}";
         speedLevelText.fontSize = 25;
         depthLevelText.text = $"DEPTH LEVEL: {currentDrill.depthLevel}";
-        depthLevelText.fontSize = 25;
+        depthLevelText.fontSize = 20;
         UpdateUpgradeButton();
     }
 
