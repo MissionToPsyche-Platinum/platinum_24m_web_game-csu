@@ -35,10 +35,10 @@ public class DrillUpgradeUI : MonoBehaviour
 
     void Refresh()
     {
-        speedLevelText.text = $"SPEED LEVEL: {currentDrill.level}";
+        speedLevelText.text = $"SPEED LEVEL: {currentDrill.speedLevel}";
         speedLevelText.fontSize = 25;
         depthLevelText.text = $"DEPTH LEVEL: {currentDrill.depthLevel}";
-        depthLevelText.fontSize = 20;
+        depthLevelText.fontSize = 25;
         UpdateUpgradeButton();
     }
 
@@ -60,7 +60,7 @@ public class DrillUpgradeUI : MonoBehaviour
             ? currentDrill.speedUpgradeCost
             : currentDrill.depthUpgradeCost;
 
-        upgradeButtonText.text = $"UPGRADE ({cost})";
+        upgradeButtonText.text = $"{cost}";
     }
 
     public void OnUpgradePressed()
