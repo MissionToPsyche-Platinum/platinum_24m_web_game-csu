@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI; //mohammed added for text mesh pro support
 using TMPro;
 
 public class DrillUIPanel : MonoBehaviour
