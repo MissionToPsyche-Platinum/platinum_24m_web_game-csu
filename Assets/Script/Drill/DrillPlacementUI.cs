@@ -17,9 +17,9 @@ public class DrillUIPanel : MonoBehaviour
 
         if (currentSlot != null && currentSlot.drillPrefab != null)
         {
-            int cost = currentSlot.drillPrefab.GetComponent<Drill>().placementCost;
+            int cost = DrillCost.Instance.GetNextDrillCost();
             if (costText != null)
-                costText.text = $"Cost: {cost} Credits";
+                costText.text = $"Would you like to place a drill here for {cost} Credits";
 
             // Optional: grey out buy button if player can't afford
             if (buyButton != null)
@@ -33,9 +33,9 @@ public class DrillUIPanel : MonoBehaviour
     {
         if (currentSlot == null || currentSlot.drillPrefab == null)
             return;
+       Drill drill = currentSlot.drillPrefab.GetComponent<Drill>();
 
-        Drill drill = currentSlot.drillPrefab.GetComponent<Drill>();
-
+        int cost = DrillCost.Instance.GetNextDrillCost();
         // Check if the player can afford the drill
         if (CurrencyManager.Instance.currency < drill.placementCost)
         {
@@ -43,11 +43,14 @@ public class DrillUIPanel : MonoBehaviour
             return;
         }
 
-        // Deduct the placement cost
-        CurrencyManager.Instance.SpendCurrency(drill.placementCost);
-
         // Build the drill in this slot
         currentSlot.BuildDrill();
+
+        // Deduct the placement cost
+        CurrencyManager.Instance.SpendCurrency(drill.placementCost);
+        DrillCost.Instance.RegisterDrill();
+
+
 
         Close();
     }

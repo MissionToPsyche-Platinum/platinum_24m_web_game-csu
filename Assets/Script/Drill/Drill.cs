@@ -36,7 +36,7 @@ public class Drill : MonoBehaviour
         }
     }
 
-    void GenerateMaterial()
+    void GenerateMaterial() 
     {
         int minedAmount = Random.Range(minMaterial, maxMaterial + 1);
         MaterialManager.Instance.AddMaterial(minedAmount);
@@ -63,9 +63,9 @@ public class Drill : MonoBehaviour
         depthUpgradeCost += 1500;
     }
 
-    // ---------------------------
+    
     // Stats calculations
-    // ---------------------------
+    
     void ApplySpeedStats()
     {
         // Speed upgrades reduce the generation interval
