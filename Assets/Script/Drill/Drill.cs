@@ -24,6 +24,7 @@ public class Drill : MonoBehaviour
     {
         ApplySpeedStats();
         ApplyDepthStats();
+	placementCost  = DrillCost.Instance.GetNextDrillCost();
     }
 
     void Update()
