@@ -282,7 +282,7 @@ MonoBehaviour:
   m_text: yes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
-  m_sharedMaterial: {fileID: 7631345131029461928, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
+  m_sharedMaterial: {fileID: 447607858673327836, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_margin: {x: 1.1472626, y: 24.07413, z: 146.21617, w: 5.545122}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &83713341
@@ -955,7 +955,7 @@ MonoBehaviour:
   m_text: Cost
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
-  m_sharedMaterial: {fileID: 7631345131029461928, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
+  m_sharedMaterial: {fileID: 447607858673327836, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1097,8 +1097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e341f2cfa0155e4bb0f18600cc94df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrillUIPanel
-  costText: {fileID: 0}
-  buyButton: {fileID: 0}
 --- !u!1 &381970442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,8 +1157,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Material: 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
+  m_sharedMaterial: {fileID: 447607858673327836, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1462,7 +1460,7 @@ MonoBehaviour:
   m_text: 'Speed Level : 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
-  m_sharedMaterial: {fileID: 7631345131029461928, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
+  m_sharedMaterial: {fileID: 447607858673327836, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2061,7 +2059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &658837026
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2136,8 +2134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e341f2cfa0155e4bb0f18600cc94df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrillUIPanel
-  costText: {fileID: 1798508933}
-  buyButton: {fileID: 1643559039}
 --- !u!114 &658837030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3690,7 +3686,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1521559675
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4125,7 +4121,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 909.628, y: -47.88501}
+  m_AnchoredPosition: {x: 909.628, y: -47.884888}
   m_SizeDelta: {x: 100.749, y: 95.768}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1690559899
@@ -4433,7 +4429,7 @@ MonoBehaviour:
   m_text: 'Depth Level: 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
-  m_sharedMaterial: {fileID: 7631345131029461928, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
+  m_sharedMaterial: {fileID: 447607858673327836, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4658,7 +4654,6 @@ GameObject:
   - component: {fileID: 1798508932}
   - component: {fileID: 1798508934}
   - component: {fileID: 1798508933}
-  - component: {fileID: 1798508935}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -4708,7 +4703,7 @@ MonoBehaviour:
   m_text: WOULD YOU LIKE TO BUILD A DRILL HERE FOR XXXX
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
-  m_sharedMaterial: {fileID: 7631345131029461928, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
+  m_sharedMaterial: {fileID: 447607858673327836, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4785,21 +4780,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1798508931}
   m_CullTransparentMesh: 1
---- !u!114 &1798508935
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798508931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
-  m_EffectDistance: {x: 1, y: 1}
-  m_UseGraphicAlpha: 0
 --- !u!1 &1804715045
 GameObject:
   m_ObjectHideFlags: 0
@@ -5128,8 +5108,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Resume
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
+  m_fontAsset: {fileID: 11400000, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
+  m_sharedMaterial: {fileID: 447607858673327836, guid: 38204deffcdc0f243b20f69355bd4c85, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
