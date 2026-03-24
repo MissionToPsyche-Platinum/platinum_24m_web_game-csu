@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using TMPro; //mohammed added for text mesh pro support
 public class DrillSlot : MonoBehaviour
 {
-   
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     public bool occupied = false;
     public GameObject drillPrefab;
     public Transform drillSpawnPoint;
@@ -15,7 +15,7 @@ public class DrillSlot : MonoBehaviour
     {
         if (slotButton != null)
         {
-            
+            // Assign the click listener dynamically at runtime
             slotButton.onClick.AddListener(OnSlotClick);
         }
         else

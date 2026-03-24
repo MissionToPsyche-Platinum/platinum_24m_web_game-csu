@@ -19,7 +19,7 @@ public class DrillUpgradeUI : MonoBehaviour
         Instance = this;
         gameObject.SetActive(false);
     }
-    //By Default the speed upgrade is selected.
+
     public void Open(Drill drill)
     {
         currentDrill = drill;
@@ -33,7 +33,7 @@ public class DrillUpgradeUI : MonoBehaviour
         gameObject.SetActive(false);
         currentDrill = null;
     }
-    
+
     void Refresh()
     {
         speedLevelText.text = $"SPEED LEVEL: {currentDrill.speedLevel}";
@@ -42,19 +42,19 @@ public class DrillUpgradeUI : MonoBehaviour
         depthLevelText.fontSize = 25;
         UpdateUpgradeButton();
     }
-    //Select Speed Function/Button
+
     public void SelectSpeed()
     {
         selectedUpgrade = UpgradeType.Speed;
         UpdateUpgradeButton();
     }
-    //Select Depth Function/Button
+
     public void SelectDepth()
     {
         selectedUpgrade = UpgradeType.Depth;
         UpdateUpgradeButton();
     }
-    //When another upgrade is selected change the cost value.
+
     void UpdateUpgradeButton()
     {
         int cost = selectedUpgrade == UpgradeType.Speed
@@ -63,7 +63,7 @@ public class DrillUpgradeUI : MonoBehaviour
 
         upgradeButtonText.text = $"{cost}";
     }
-    //Upgrade Confirm button
+
     public void OnUpgradePressed()
     {
         if (selectedUpgrade == UpgradeType.Speed)
