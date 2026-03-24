@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DrillHover : MonoBehaviour
 {
-    public GameObject outline; // assign Outline child
+    public GameObject outline; 
     private Drill drill;
 
     private void Awake()
