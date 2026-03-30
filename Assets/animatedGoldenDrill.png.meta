@@ -1,0 +1,1066 @@
+fileFormatVersion: 2
+guid: 49114b3d308460542b974e66ca52d928
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6898397546156186811
+    second: animatedGoldenDrill_0
+  - first:
+      213: 5351143097979606572
+    second: animatedGoldenDrill_1
+  - first:
+      213: -7990181086852521738
+    second: animatedGoldenDrill_2
+  - first:
+      213: 1742229427565956664
+    second: animatedGoldenDrill_3
+  - first:
+      213: -8717593525587085029
+    second: animatedGoldenDrill_4
+  - first:
+      213: 8276516942280458417
+    second: animatedGoldenDrill_5
+  - first:
+      213: -3207278691402647726
+    second: animatedGoldenDrill_6
+  - first:
+      213: -535429197279331584
+    second: animatedGoldenDrill_7
+  - first:
+      213: 7777195394129842698
+    second: animatedGoldenDrill_8
+  - first:
+      213: 357105763076000800
+    second: animatedGoldenDrill_9
+  - first:
+      213: 1286329930155435976
+    second: animatedGoldenDrill_10
+  - first:
+      213: -1980663994571007025
+    second: animatedGoldenDrill_11
+  - first:
+      213: -2777622202891527527
+    second: animatedGoldenDrill_12
+  - first:
+      213: 2089931289882418197
+    second: animatedGoldenDrill_13
+  - first:
+      213: -7833586471503159742
+    second: animatedGoldenDrill_14
+  - first:
+      213: -4954013845471477898
+    second: animatedGoldenDrill_15
+  - first:
+      213: 2996677443602005140
+    second: animatedGoldenDrill_16
+  - first:
+      213: -243302349365962359
+    second: animatedGoldenDrill_17
+  - first:
+      213: 8372147655639090953
+    second: animatedGoldenDrill_18
+  - first:
+      213: 2322100419808589913
+    second: animatedGoldenDrill_19
+  - first:
+      213: -7767679414716998538
+    second: animatedGoldenDrill_20
+  - first:
+      213: 5782843748639898079
+    second: animatedGoldenDrill_21
+  - first:
+      213: 391967151220584417
+    second: animatedGoldenDrill_22
+  - first:
+      213: -6921367084978290358
+    second: animatedGoldenDrill_23
+  - first:
+      213: -4875508349089792715
+    second: animatedGoldenDrill_24
+  - first:
+      213: 2379291074493273021
+    second: animatedGoldenDrill_25
+  - first:
+      213: 6923410475009877664
+    second: animatedGoldenDrill_26
+  - first:
+      213: 2867604173252301149
+    second: animatedGoldenDrill_27
+  - first:
+      213: 7900741153440463337
+    second: animatedGoldenDrill_28
+  - first:
+      213: 3026258266883417558
+    second: animatedGoldenDrill_29
+  - first:
+      213: 2972309581314062677
+    second: animatedGoldenDrill_30
+  - first:
+      213: 1950184019551922463
+    second: animatedGoldenDrill_31
+  - first:
+      213: -9101513368361495083
+    second: animatedGoldenDrill_32
+  - first:
+      213: -7801880924918130843
+    second: animatedGoldenDrill_33
+  - first:
+      213: -625476172657094803
+    second: animatedGoldenDrill_34
+  - first:
+      213: -917556622981520674
+    second: animatedGoldenDrill_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: animatedGoldenDrill_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2642
+        width: 305
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5432fe52bf7f340a0800000000000000
+      internalID: -6898397546156186811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_1
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 2641
+        width: 305
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c269b59cb44134a40800000000000000
+      internalID: 5351143097979606572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_2
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 2642
+        width: 305
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f06c13a2ac2d1190800000000000000
+      internalID: -7990181086852521738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_3
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 2645
+        width: 305
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e0d430f64ad2810800000000000000
+      internalID: 1742229427565956664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_4
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 2644
+        width: 305
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19f22350e2e40780800000000000000
+      internalID: -8717593525587085029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_5
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 2644
+        width: 305
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b00122ee481cd270800000000000000
+      internalID: 8276516942280458417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2117
+        width: 305
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 257f347e5057d73d0800000000000000
+      internalID: -3207278691402647726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_7
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 2117
+        width: 305
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00bfacd5bf5c198f0800000000000000
+      internalID: -535429197279331584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_8
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 2115
+        width: 305
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a02d9ef61062eeb60800000000000000
+      internalID: 7777195394129842698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_9
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 2115
+        width: 305
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02cc36bacc1b4f400800000000000000
+      internalID: 357105763076000800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_10
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 2114
+        width: 305
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c72ed69146f9d110800000000000000
+      internalID: 1286329930155435976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_11
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 2117
+        width: 305
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcb503847944384e0800000000000000
+      internalID: -1980663994571007025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1589
+        width: 305
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a996ca257e379d0800000000000000
+      internalID: -2777622202891527527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_13
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1589
+        width: 305
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51c5a6a6f6de00d10800000000000000
+      internalID: 2089931289882418197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_14
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1589
+        width: 305
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e9fb8bb92894390800000000000000
+      internalID: -7833586471503159742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_15
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1588
+        width: 305
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67f3e40b7aecf3bb0800000000000000
+      internalID: -4954013845471477898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_16
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 1588
+        width: 305
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49cb2540246569920800000000000000
+      internalID: 2996677443602005140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_17
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 1585
+        width: 305
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98916056dcd9f9cf0800000000000000
+      internalID: -243302349365962359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1059
+        width: 305
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 907cc7d6fe7df2470800000000000000
+      internalID: 8372147655639090953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_19
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1060
+        width: 305
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 958f97f5702c93020800000000000000
+      internalID: 2322100419808589913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_20
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1059
+        width: 305
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67cddac2ab8a33490800000000000000
+      internalID: -7767679414716998538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_21
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1058
+        width: 305
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd9f44520c9c04050800000000000000
+      internalID: 5782843748639898079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_22
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 1058
+        width: 305
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1efef1c1c0c807500800000000000000
+      internalID: 391967151220584417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_23
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 1061
+        width: 305
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a41c9c3ae4d52ff90800000000000000
+      internalID: -6921367084978290358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 531
+        width: 305
+        height: 519
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53d3d01fcf6b65cb0800000000000000
+      internalID: -4875508349089792715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_25
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 530
+        width: 305
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db3dd6050a0f40120800000000000000
+      internalID: 2379291074493273021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_26
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 530
+        width: 305
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a6ae2d2525e41060800000000000000
+      internalID: 6923410475009877664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_27
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 529
+        width: 305
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5191276dc6cbc720800000000000000
+      internalID: 2867604173252301149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_28
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 532
+        width: 305
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e9f029183215ad60800000000000000
+      internalID: 7900741153440463337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_29
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 533
+        width: 305
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5ec242cdd6ff920800000000000000
+      internalID: 3026258266883417558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_30
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 305
+        height: 518
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 559f6b4f0d3cf3920800000000000000
+      internalID: 2972309581314062677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_31
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 5
+        width: 305
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1929048802701b10800000000000000
+      internalID: 1950184019551922463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_32
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 5
+        width: 305
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d5185830dde0b180800000000000000
+      internalID: -9101513368361495083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_33
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 5
+        width: 305
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 567db5a82a62ab390800000000000000
+      internalID: -7801880924918130843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_34
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 5
+        width: 305
+        height: 517
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f8d412cbcd157f0800000000000000
+      internalID: -625476172657094803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: animatedGoldenDrill_35
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 2
+        width: 305
+        height: 520
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed221e1ec1f2443f0800000000000000
+      internalID: -917556622981520674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      animatedGoldenDrill_0: -6898397546156186811
+      animatedGoldenDrill_1: 5351143097979606572
+      animatedGoldenDrill_10: 1286329930155435976
+      animatedGoldenDrill_11: -1980663994571007025
+      animatedGoldenDrill_12: -2777622202891527527
+      animatedGoldenDrill_13: 2089931289882418197
+      animatedGoldenDrill_14: -7833586471503159742
+      animatedGoldenDrill_15: -4954013845471477898
+      animatedGoldenDrill_16: 2996677443602005140
+      animatedGoldenDrill_17: -243302349365962359
+      animatedGoldenDrill_18: 8372147655639090953
+      animatedGoldenDrill_19: 2322100419808589913
+      animatedGoldenDrill_2: -7990181086852521738
+      animatedGoldenDrill_20: -7767679414716998538
+      animatedGoldenDrill_21: 5782843748639898079
+      animatedGoldenDrill_22: 391967151220584417
+      animatedGoldenDrill_23: -6921367084978290358
+      animatedGoldenDrill_24: -4875508349089792715
+      animatedGoldenDrill_25: 2379291074493273021
+      animatedGoldenDrill_26: 6923410475009877664
+      animatedGoldenDrill_27: 2867604173252301149
+      animatedGoldenDrill_28: 7900741153440463337
+      animatedGoldenDrill_29: 3026258266883417558
+      animatedGoldenDrill_3: 1742229427565956664
+      animatedGoldenDrill_30: 2972309581314062677
+      animatedGoldenDrill_31: 1950184019551922463
+      animatedGoldenDrill_32: -9101513368361495083
+      animatedGoldenDrill_33: -7801880924918130843
+      animatedGoldenDrill_34: -625476172657094803
+      animatedGoldenDrill_35: -917556622981520674
+      animatedGoldenDrill_4: -8717593525587085029
+      animatedGoldenDrill_5: 8276516942280458417
+      animatedGoldenDrill_6: -3207278691402647726
+      animatedGoldenDrill_7: -535429197279331584
+      animatedGoldenDrill_8: 7777195394129842698
+      animatedGoldenDrill_9: 357105763076000800
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
