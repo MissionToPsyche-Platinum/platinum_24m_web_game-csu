@@ -37,12 +37,29 @@ public class DrillUpgradeUI : MonoBehaviour
 
     void Refresh()
     {
-        speedLevelText.text = $"SPEED LEVEL: {currentDrill.speedLevel}";
+        // Display SPEED LEVEL
+        if (currentDrill.speedLevel >= currentDrill.maxLevel)
+        {
+            speedLevelText.text = "SPEED LEVEL: MAXED";
+        }
+        else
+        {
+            speedLevelText.text = $"SPEED LEVEL: {currentDrill.speedLevel}";
+        }
         speedLevelText.fontSize = 25;
 
-        depthLevelText.text = $"DEPTH LEVEL: {currentDrill.depthLevel}";
+        // Display DEPTH LEVEL
+        if (currentDrill.depthLevel >= currentDrill.maxLevel)
+        {
+            depthLevelText.text = "DEPTH LEVEL: MAXED";
+        }
+        else
+        {
+            depthLevelText.text = $"DEPTH LEVEL: {currentDrill.depthLevel}";
+        }
         depthLevelText.fontSize = 25;
 
+        // Update upgrade button
         UpdateUpgradeButton();
     }
 
@@ -63,11 +80,34 @@ public class DrillUpgradeUI : MonoBehaviour
     // Update upgrade button cost when upgrade type changes
     void UpdateUpgradeButton()
     {
-        int cost = selectedUpgrade == UpgradeType.Speed
-            ? currentDrill.speedUpgradeCost
-            : currentDrill.depthUpgradeCost;
+        bool isMaxed = false;
+        int cost = 0;
 
-        upgradeButtonText.text = $"{cost}";
+        if (selectedUpgrade == UpgradeType.Speed)
+        {
+            if (currentDrill.speedLevel >= currentDrill.maxLevel)
+            {
+                isMaxed = true;
+            }
+            else
+            {
+                cost = currentDrill.speedUpgradeCost;
+            }
+        }
+        else // Depth upgrade selected
+        {
+            if (currentDrill.depthLevel >= currentDrill.maxLevel)
+            {
+                isMaxed = true;
+            }
+            else
+            {
+                cost = currentDrill.depthUpgradeCost;
+            }
+        }
+
+        // Update the button text
+        upgradeButtonText.text = isMaxed ? "MAXED" : $"{cost}";
     }
 
     // Upgrade Confirm button

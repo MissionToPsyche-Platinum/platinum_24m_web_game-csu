@@ -44,6 +44,7 @@ public class Drill : MonoBehaviour
             GenerateMaterial();
             timer = 0f;
         }
+        CheckForMaxLevelVisuals();
     }
 
     void GenerateMaterial()
@@ -99,18 +100,13 @@ public class Drill : MonoBehaviour
 
     void CheckForMaxLevelVisuals()
     {
-        // Only switch visuals if BOTH levels are max
         if (speedLevel >= maxLevel && depthLevel >= maxLevel)
         {
-            if (drillRenderer != null && goldenDrillSprite != null)
-            {
-                drillRenderer.sprite = goldenDrillSprite;
-            }
+           
 
-            // Optional: enable animation if assigned
-            if (drillAnimator != null)
+            if (drillAnimator != null && !drillAnimator.GetBool("Golden"))
             {
-                drillAnimator.SetTrigger("Golden"); // you can set up an animator trigger
+                drillAnimator.SetBool("Golden", true);
             }
         }
     }

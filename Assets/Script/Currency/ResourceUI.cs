@@ -8,7 +8,7 @@ public class MaterialUI : MonoBehaviour
 
     void Update()
     {
-        materialText.text = "Material: " + MaterialManager.Instance.materials;
-        currencyText.text = "Credit: " + CurrencyManager.Instance.currency;
+        materialText.text = ""  + MaterialManager.Instance.materials;
+        currencyText.text = "" + CurrencyManager.Instance.currency;
     }  
 }
