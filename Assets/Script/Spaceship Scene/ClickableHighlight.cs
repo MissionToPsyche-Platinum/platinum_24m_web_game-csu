@@ -5,6 +5,8 @@ public class ClickableHighlight : MonoBehaviour
     private SpriteRenderer sr;
     public Color highlightColor = new Color(1f, 0.92f, 0.016f, 1f);
     private Color originalColor;
+    public Camera mainCamera;
+    public float zoomStep = 1.5f;
 
     [Header("Upgrade Sprites (Level 2 to 5)")]
     public Sprite level2Sprite;
@@ -57,6 +59,10 @@ public class ClickableHighlight : MonoBehaviour
 
         upgradePopup.SetActive(false);
         sr.color = originalColor;
+        if (mainCamera != null)
+        {
+            mainCamera.orthographicSize += zoomStep;
+        }
     }
 
     public void OnNoClicked()

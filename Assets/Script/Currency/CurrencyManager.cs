@@ -6,10 +6,18 @@ public class CurrencyManager : MonoBehaviour
 
     public int currency;
 
-    void Start()
+    void Awake()
     {
-        Instance = this;
-        currency = 500;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            currency = 500;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void AddCurrency(int amount) {
