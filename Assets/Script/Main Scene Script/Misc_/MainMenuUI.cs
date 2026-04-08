@@ -5,7 +5,7 @@ public class MainMenuUI : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("Psyche Scene"); // Make sure name matches exactly
+        SceneManager.LoadScene("MiningScene"); // Make sure name matches exactly
     }
 
     public void QuitGame()
