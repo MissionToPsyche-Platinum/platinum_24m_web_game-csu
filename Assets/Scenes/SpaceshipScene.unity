@@ -262,7 +262,11 @@ MonoBehaviour:
   level3Sprite: {fileID: -492111648660132467, guid: f32d96da99383db498b3d92d10c5259e, type: 3}
   level4Sprite: {fileID: -8751620949256052375, guid: f32d96da99383db498b3d92d10c5259e, type: 3}
   level5Sprite: {fileID: 21300002, guid: c4d8ed7c5adcd0e489c81b34c69fa753, type: 3}
+  materialCosts: 64000000881300001027000050c30000
+  currencyCosts: dc050000204e0000e093040020a10700
   upgradePopup: {fileID: 1926046693}
+  upgradeCostText: {fileID: 397647979}
+  yesButton: {fileID: 1517999540}
 --- !u!1 &89496215
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,6 +3,7 @@ using UnityEngine;
 public class Drill : MonoBehaviour
 {
     // Drill Levels
+    public int slotIndex;         // Assigned by DrillManager when instantiated
     public int speedLevel = 1;      // affects generation interval
     public int depthLevel = 1;      // affects min/max material
     public int maxLevel = 3;        // Max level for both speed and depth
@@ -60,6 +61,7 @@ public class Drill : MonoBehaviour
 
         speedLevel++;
         ApplySpeedStats();
+        DrillManager.Instance.SaveDrill(slotIndex, speedLevel, depthLevel);
         speedUpgradeCost += 1000;
         CheckForMaxLevelVisuals();
     }
@@ -71,6 +73,7 @@ public class Drill : MonoBehaviour
 
         depthLevel++;
         ApplyDepthStats();
+        DrillManager.Instance.SaveDrill(slotIndex, speedLevel, depthLevel);
         depthUpgradeCost += 1500;
         CheckForMaxLevelVisuals();
     }

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using TMPro; //mohammed added for text mesh pro support
 public class DrillSlot : MonoBehaviour
 {
-   
+    public Drill currentDrill;
     public bool occupied = false;
     public GameObject drillPrefab;
     public Transform drillSpawnPoint;
@@ -15,7 +15,7 @@ public class DrillSlot : MonoBehaviour
     {
         if (slotButton != null)
         {
-            
+
             slotButton.onClick.AddListener(OnSlotClick);
         }
         else
@@ -50,9 +50,20 @@ public class DrillSlot : MonoBehaviour
             var drillObj = Instantiate(drillPrefab, drillSpawnPoint.position, Quaternion.identity);
             Drill drillComp = drillObj.GetComponent<Drill>();
 
-            // Save initial drill stats
+            // Assign the slot index
+            drillComp.slotIndex = slotManager.slots.IndexOf(this);
+
+            // Restore saved levels if they exist
+            var savedData = DrillManager.Instance.GetDrill(drillComp.slotIndex);
+            if (savedData != null)
+            {
+                drillComp.speedLevel = savedData.speedLevel;
+                drillComp.depthLevel = savedData.depthLevel;
+            }
+
+            // Save initial drill stats to DrillManager
             DrillManager.Instance.SaveDrill(
-                slotManager.slots.IndexOf(this),
+                drillComp.slotIndex,
                 drillComp.speedLevel,
                 drillComp.depthLevel
             );
