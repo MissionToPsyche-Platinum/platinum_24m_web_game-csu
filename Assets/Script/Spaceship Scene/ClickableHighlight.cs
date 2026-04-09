@@ -52,65 +52,69 @@ public class ClickableHighlight : MonoBehaviour
     }
 
     private void ShowUpgradePopup()
+{
+    if (currentLevel >= 5)
     {
-        if (currentLevel >= 5)
-        {
-            Debug.Log("Ship is already at max level!");
-            upgradePopup.SetActive(false);
-            return;
-        }
+        Debug.Log("Ship is already at max level!");
+        upgradePopup.SetActive(false);
+        return;
+    }
 
-        int nextIndex = currentLevel - 1;
-        int nextMaterialCost = materialCosts[nextIndex];
-        int nextCurrencyCost = currencyCosts[nextIndex];
+    int nextIndex = currentLevel - 1;
+    int nextMaterialCost = materialCosts[nextIndex];
+    int nextCurrencyCost = currencyCosts[nextIndex];
 
-        // Update combined cost text
+    if (DisasterManager.Instance.hasDebt)
+        nextCurrencyCost += DisasterManager.Instance.repairCost;
+
+    if (DisasterManager.Instance.hasDebt)
+        upgradeCostText.text = $"Upgrade your ship for {nextCurrencyCost} credits (includes {DisasterManager.Instance.repairCost} repair debt) and {nextMaterialCost} materials.";
+    else
         upgradeCostText.text = $"Upgrade your ship for {nextCurrencyCost} credits and {nextMaterialCost} materials.";
 
-        // Enable/disable Yes button if affordable
-        bool canAfford = MaterialManager.Instance.materials >= nextMaterialCost &&
-                         CurrencyManager.Instance.currency >= nextCurrencyCost;
-        yesButton.interactable = canAfford;
+    bool canAfford = MaterialManager.Instance.materials >= nextMaterialCost &&
+                     CurrencyManager.Instance.currency >= nextCurrencyCost;
+    yesButton.interactable = canAfford;
 
-        upgradePopup.SetActive(true);
-    }
+    upgradePopup.SetActive(true);
+}
 
-    public void OnYesClicked()
+public void OnYesClicked()
+{
+    int nextIndex = currentLevel - 1;
+    int requiredMaterials = materialCosts[nextIndex];
+    int requiredCurrency = currencyCosts[nextIndex];
+
+    if (DisasterManager.Instance.hasDebt)
+        requiredCurrency += DisasterManager.Instance.repairCost;
+
+    if (MaterialManager.Instance.materials < requiredMaterials ||
+        CurrencyManager.Instance.currency < requiredCurrency)
     {
-        int nextIndex = currentLevel - 1;
-        int requiredMaterials = materialCosts[nextIndex];
-        int requiredCurrency = currencyCosts[nextIndex];
-
-        // Double-check affordability
-        if (MaterialManager.Instance.materials < requiredMaterials ||
-            CurrencyManager.Instance.currency < requiredCurrency)
-        {
-            Debug.Log("Not enough resources to upgrade!");
-            upgradePopup.SetActive(false);
-            return;
-        }
-
-        // Spend resources
-        MaterialManager.Instance.SpendMaterial(requiredMaterials);
-        CurrencyManager.Instance.SpendCurrency(requiredCurrency);
-
-        // Upgrade ship sprite
-        currentLevel++;
-        switch (currentLevel)
-        {
-            case 2: sr.sprite = level2Sprite; break;
-            case 3: sr.sprite = level3Sprite; break;
-            case 4: sr.sprite = level4Sprite; break;
-            case 5: sr.sprite = level5Sprite; break;
-        }
-
+        Debug.Log("Not enough resources to upgrade!");
         upgradePopup.SetActive(false);
-        sr.color = originalColor;
-
-        // Zoom camera if applicable
-        if (mainCamera != null)
-            mainCamera.orthographicSize += zoomStep;
+        return;
     }
+
+    MaterialManager.Instance.SpendMaterial(requiredMaterials);
+    CurrencyManager.Instance.SpendCurrency(requiredCurrency);
+    DisasterManager.Instance.hasDebt = false; // clear debt on upgrade
+
+    currentLevel++;
+    switch (currentLevel)
+    {
+        case 2: sr.sprite = level2Sprite; break;
+        case 3: sr.sprite = level3Sprite; break;
+        case 4: sr.sprite = level4Sprite; break;
+        case 5: sr.sprite = level5Sprite; break;
+    }
+
+    upgradePopup.SetActive(false);
+    sr.color = originalColor;
+
+    if (mainCamera != null)
+        mainCamera.orthographicSize += zoomStep;
+}
 
     public void OnNoClicked()
     {
