@@ -7,25 +7,66 @@ public class AsteroidSlotManager : MonoBehaviour
 
     private void Start()
     {
-        // Ensure only the first slot is active at start
+        RestoreDrills();
+        ActivateNextSlotInLine();
+    }
+
+    private void RestoreDrills()
+    {
+        if (DrillManager.Instance == null)
+        {
+            Debug.LogWarning("DrillManager instance not found!");
+            return;
+        }
+
         for (int i = 0; i < slots.Count; i++)
         {
-            slots[i].gameObject.SetActive(i == 0);
+            var data = DrillManager.Instance.GetDrill(i);
+
+            if (data != null)
+            {
+                // Slot is occupied because a drill exists
+                slots[i].occupied = true;
+                slots[i].gameObject.SetActive(false); // hide slot since drill exists
+
+                if (slots[i].drillPrefab != null && slots[i].drillSpawnPoint != null)
+                {
+                    var drillObj = Instantiate(slots[i].drillPrefab, slots[i].drillSpawnPoint.position, Quaternion.identity);
+                    Drill drillComp = drillObj.GetComponent<Drill>();
+                    drillComp.speedLevel = data.speedLevel;
+                    drillComp.depthLevel = data.depthLevel;
+                }
+            }
+            else
+            {
+                // Slot is empty
+                slots[i].occupied = false;
+                slots[i].gameObject.SetActive(false); // hide by default
+            }
+        }
+    }
+
+    private void ActivateNextSlotInLine()
+    {
+        // Activate only the next unoccupied slot in sequence
+        foreach (var slot in slots)
+        {
+            if (!slot.occupied)
+            {
+                slot.gameObject.SetActive(true);
+                break; // only one slot is active at a time
+            }
         }
     }
 
     public void OnSlotUsed(DrillSlot usedSlot)
     {
         int index = slots.IndexOf(usedSlot);
-        Debug.Log($"Used slot: {usedSlot.name}, index: {index}");
 
         if (index >= 0 && index + 1 < slots.Count)
         {
+            // Activate the next slot in sequence after placement
             slots[index + 1].gameObject.SetActive(true);
-            Debug.Log($"Unlocked slot: {slots[index + 1].name}");
         }
     }
-
 }
-
-

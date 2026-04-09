@@ -45,20 +45,21 @@ public class DrillSlot : MonoBehaviour
 
         occupied = true;
 
-        // Spawn the drill prefab at the designated spawn point
         if (drillPrefab != null && drillSpawnPoint != null)
         {
-            Instantiate(drillPrefab, drillSpawnPoint.position, Quaternion.identity);
-        }
-        else
-        {
-            Debug.LogWarning("DrillPrefab or SpawnPoint not assigned for " + gameObject.name);
+            var drillObj = Instantiate(drillPrefab, drillSpawnPoint.position, Quaternion.identity);
+            Drill drillComp = drillObj.GetComponent<Drill>();
+
+            // Save initial drill stats
+            DrillManager.Instance.SaveDrill(
+                slotManager.slots.IndexOf(this),
+                drillComp.speedLevel,
+                drillComp.depthLevel
+            );
         }
 
-        // Hide this slot button now that the drill is built
         gameObject.SetActive(false);
 
-        // Notify the slot manager to unlock the next slot
         if (slotManager != null)
         {
             slotManager.OnSlotUsed(this);
