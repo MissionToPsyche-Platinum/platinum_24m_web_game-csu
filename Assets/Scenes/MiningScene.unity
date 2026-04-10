@@ -3078,6 +3078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59818fb607a6b54795713e6f48d35cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrillSlot
+  currentDrill: {fileID: 0}
   occupied: 0
   drillPrefab: {fileID: 3065807654522095085, guid: 42681f9ce36a08f43b85ae468c048f34, type: 3}
   drillSpawnPoint: {fileID: 559234177}
@@ -3756,6 +3757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59818fb607a6b54795713e6f48d35cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrillSlot
+  currentDrill: {fileID: 0}
   occupied: 0
   drillPrefab: {fileID: 3065807654522095085, guid: 42681f9ce36a08f43b85ae468c048f34, type: 3}
   drillSpawnPoint: {fileID: 803839294}
@@ -4394,6 +4396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59818fb607a6b54795713e6f48d35cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrillSlot
+  currentDrill: {fileID: 0}
   occupied: 0
   drillPrefab: {fileID: 3065807654522095085, guid: 42681f9ce36a08f43b85ae468c048f34, type: 3}
   drillSpawnPoint: {fileID: 1158964503}
@@ -7435,6 +7438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59818fb607a6b54795713e6f48d35cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrillSlot
+  currentDrill: {fileID: 0}
   occupied: 0
   drillPrefab: {fileID: 3065807654522095085, guid: 42681f9ce36a08f43b85ae468c048f34, type: 3}
   drillSpawnPoint: {fileID: 1806685593}
@@ -7919,6 +7923,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59818fb607a6b54795713e6f48d35cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrillSlot
+  currentDrill: {fileID: 0}
   occupied: 0
   drillPrefab: {fileID: 3065807654522095085, guid: 42681f9ce36a08f43b85ae468c048f34, type: 3}
   drillSpawnPoint: {fileID: 1964103328}

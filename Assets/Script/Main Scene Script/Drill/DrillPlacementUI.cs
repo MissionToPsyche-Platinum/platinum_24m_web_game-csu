@@ -7,8 +7,8 @@ public class DrillUIPanel : MonoBehaviour
     private DrillSlot currentSlot;
 
     [Header("UI Elements")]
-    public TMP_Text costText; // Assign this in the Inspector to show the placement cost
-    public GameObject buyButton; // Optional: can disable if player can't afford
+    public TMP_Text costText; 
+    public GameObject buyButton; 
 
     // Called by the slot when clicked
     public void Open(DrillSlot slot)
@@ -17,12 +17,13 @@ public class DrillUIPanel : MonoBehaviour
 
         if (currentSlot != null && currentSlot.drillPrefab != null)
         {
-            int cost = DrillCost.Instance.GetNextDrillCost();
+            int slotIndex = currentSlot.slotManager.slots.IndexOf(currentSlot);
+            int cost = DrillCost.Instance.GetCostForSlot(slotIndex);
 
             if (costText != null)
                 costText.text = $"Would you like to place a drill here for {cost} Credits";
 
-            // Optional: grey out buy button if player can't afford
+            
             if (buyButton != null)
                 buyButton.SetActive(CurrencyManager.Instance.currency >= cost);
         }
@@ -35,23 +36,18 @@ public class DrillUIPanel : MonoBehaviour
         if (currentSlot == null || currentSlot.drillPrefab == null)
             return;
 
-        int cost = DrillCost.Instance.GetNextDrillCost();
+        int slotIndex = currentSlot.slotManager.slots.IndexOf(currentSlot);
+        int cost = DrillCost.Instance.GetCostForSlot(slotIndex);
 
-        // Check if player can afford
         if (CurrencyManager.Instance.currency < cost)
         {
             Debug.Log("Not enough credits to place drill!");
             return;
         }
 
-        // Build drill
         currentSlot.BuildDrill();
 
-        // Deduct correct cost
         CurrencyManager.Instance.SpendCurrency(cost);
-
-        // Register drill for next cost increase
-        DrillCost.Instance.RegisterDrill();
 
         Close();
     }

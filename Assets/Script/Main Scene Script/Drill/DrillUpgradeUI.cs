@@ -11,6 +11,7 @@ public class DrillUpgradeUI : MonoBehaviour
     public TMP_Text upgradeButtonText;
 
     Drill currentDrill;
+
     enum UpgradeType { Speed, Depth }
     UpgradeType selectedUpgrade;
 
@@ -20,7 +21,6 @@ public class DrillUpgradeUI : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    // By default, the speed upgrade is selected.
     public void Open(Drill drill)
     {
         currentDrill = drill;
@@ -37,47 +37,37 @@ public class DrillUpgradeUI : MonoBehaviour
 
     void Refresh()
     {
-        // Display SPEED LEVEL
+        // SPEED
         if (currentDrill.speedLevel >= currentDrill.maxLevel)
-        {
             speedLevelText.text = "SPEED LEVEL: MAXED";
-        }
         else
-        {
             speedLevelText.text = $"SPEED LEVEL: {currentDrill.speedLevel}";
-        }
+
         speedLevelText.fontSize = 25;
 
-        // Display DEPTH LEVEL
+        // DEPTH
         if (currentDrill.depthLevel >= currentDrill.maxLevel)
-        {
             depthLevelText.text = "DEPTH LEVEL: MAXED";
-        }
         else
-        {
             depthLevelText.text = $"DEPTH LEVEL: {currentDrill.depthLevel}";
-        }
+
         depthLevelText.fontSize = 25;
 
-        // Update upgrade button
         UpdateUpgradeButton();
     }
 
-    // Select Speed Function/Button
     public void SelectSpeed()
     {
         selectedUpgrade = UpgradeType.Speed;
         UpdateUpgradeButton();
     }
 
-    // Select Depth Function/Button
     public void SelectDepth()
     {
         selectedUpgrade = UpgradeType.Depth;
         UpdateUpgradeButton();
     }
 
-    // Update upgrade button cost when upgrade type changes
     void UpdateUpgradeButton()
     {
         bool isMaxed = false;
@@ -91,10 +81,10 @@ public class DrillUpgradeUI : MonoBehaviour
             }
             else
             {
-                cost = currentDrill.speedUpgradeCost;
+                cost = currentDrill.GetSpeedUpgradeCost();
             }
         }
-        else // Depth upgrade selected
+        else
         {
             if (currentDrill.depthLevel >= currentDrill.maxLevel)
             {
@@ -102,15 +92,13 @@ public class DrillUpgradeUI : MonoBehaviour
             }
             else
             {
-                cost = currentDrill.depthUpgradeCost;
+                cost = currentDrill.GetDepthUpgradeCost();
             }
         }
 
-        // Update the button text
         upgradeButtonText.text = isMaxed ? "MAXED" : $"{cost}";
     }
 
-    // Upgrade Confirm button
     public void OnUpgradePressed()
     {
         if (selectedUpgrade == UpgradeType.Speed)

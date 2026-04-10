@@ -12,14 +12,8 @@ public class DrillCost : MonoBehaviour
         Instance = this;
     }
 
-    public int GetNextDrillCost()
+    public int GetCostForSlot(int slotIndex)
     {
-        return Mathf.RoundToInt(baseDrillCost * Mathf.Pow(drillCostMultiplier, drillsPlaced)); // Cost = (baseDrillCost) * (drillCostMultiplier) ^ (drillsPlaced)
-    }
-    // Keep track number of drills
-    public void RegisterDrill()
-    {
-        drillsPlaced++;
-
+        return Mathf.RoundToInt(baseDrillCost * Mathf.Pow(drillCostMultiplier, slotIndex)); ; // Cost = (baseDrillCost) * (drillCostMultiplier) ^ (drillsPlaced)
     }
 }
