@@ -33,7 +33,7 @@ public class Drill : MonoBehaviour
     {
         ApplySpeedStats();
         ApplyDepthStats();
-        placementCost = DrillCost.Instance.GetNextDrillCost();
+        placementCost = DrillCost.Instance.GetCostForSlot(slotIndex);
         CheckForMaxLevelVisuals();
     }
 

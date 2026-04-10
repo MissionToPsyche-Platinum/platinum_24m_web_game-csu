@@ -25,23 +25,28 @@ public class AsteroidSlotManager : MonoBehaviour
 
             if (data != null)
             {
-                // Slot is occupied because a drill exists
                 slots[i].occupied = true;
-                slots[i].gameObject.SetActive(false); // hide slot since drill exists
+                slots[i].gameObject.SetActive(false);
 
                 if (slots[i].drillPrefab != null && slots[i].drillSpawnPoint != null)
                 {
                     var drillObj = Instantiate(slots[i].drillPrefab, slots[i].drillSpawnPoint.position, Quaternion.identity);
                     Drill drillComp = drillObj.GetComponent<Drill>();
+
+                    
+                    drillComp.slotIndex = i;
+
                     drillComp.speedLevel = data.speedLevel;
                     drillComp.depthLevel = data.depthLevel;
+
+                    
+                    DrillManager.Instance.SaveDrill(i, drillComp.speedLevel, drillComp.depthLevel);
                 }
             }
             else
             {
-                // Slot is empty
                 slots[i].occupied = false;
-                slots[i].gameObject.SetActive(false); // hide by default
+                slots[i].gameObject.SetActive(false);
             }
         }
     }
