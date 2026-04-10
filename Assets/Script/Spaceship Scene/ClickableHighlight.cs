@@ -17,12 +17,12 @@ public class ClickableHighlight : MonoBehaviour
     public Sprite level5Sprite;
 
     [Header("Upgrade Costs")]
-    public int[] materialCosts = { 100, 5000, 10000, 50000 }; // levels 2-5
-    public int[] currencyCosts = { 1500, 20000, 300000, 500000 };
+    public int[] materialCosts = { 100, 500, 1000, 50000 }; // levels 2-5
+    public int[] currencyCosts = { 1500, 5000, 20000, 50000 };
 
     [Header("Popup")]
     public GameObject upgradePopup;
-    public TMP_Text upgradeCostText;  // assign TextMeshPro object
+    public TMP_Text upgradeCostText;  
     public Button yesButton;
 
     private int currentLevel = 1;

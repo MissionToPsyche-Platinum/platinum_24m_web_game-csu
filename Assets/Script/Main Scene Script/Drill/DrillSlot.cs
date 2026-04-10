@@ -41,9 +41,11 @@ public class DrillSlot : MonoBehaviour
 
     public void BuildDrill()
     {
+
         if (occupied) return;
 
         occupied = true;
+        Debug.Log($"[BuildDrill] CLICKED SLOT: {gameObject.name}");
 
         if (drillPrefab != null && drillSpawnPoint != null)
         {
@@ -52,6 +54,9 @@ public class DrillSlot : MonoBehaviour
 
             // Assign the slot index
             drillComp.slotIndex = slotManager.slots.IndexOf(this);
+            Debug.Log($"Clicked slot object: {gameObject.name}");
+            Debug.Log($"[BuildDrill] SLOT MARKED OCCUPIED: {gameObject.name}");
+            Debug.Log($"[BuildDrill] slotIndex ASSIGNED: {drillComp.slotIndex} | SLOT NAME: {gameObject.name}");
 
             // Restore saved levels if they exist
             var savedData = DrillManager.Instance.GetDrill(drillComp.slotIndex);
@@ -60,6 +65,7 @@ public class DrillSlot : MonoBehaviour
                 drillComp.speedLevel = savedData.speedLevel;
                 drillComp.depthLevel = savedData.depthLevel;
             }
+
 
             // Save initial drill stats to DrillManager
             DrillManager.Instance.SaveDrill(

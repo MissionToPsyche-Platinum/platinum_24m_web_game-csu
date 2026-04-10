@@ -35,6 +35,7 @@ public class AsteroidSlotManager : MonoBehaviour
 
                     
                     drillComp.slotIndex = i;
+                    Debug.Log($"[BUILD] Drill spawned at slotIndex: {drillComp.slotIndex}");
 
                     drillComp.speedLevel = data.speedLevel;
                     drillComp.depthLevel = data.depthLevel;

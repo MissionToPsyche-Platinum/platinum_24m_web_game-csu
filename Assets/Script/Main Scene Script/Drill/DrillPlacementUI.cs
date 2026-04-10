@@ -7,8 +7,8 @@ public class DrillUIPanel : MonoBehaviour
     private DrillSlot currentSlot;
 
     [Header("UI Elements")]
-    public TMP_Text costText; // Assign this in the Inspector to show the placement cost
-    public GameObject buyButton; // Optional: can disable if player can't afford
+    public TMP_Text costText; 
+    public GameObject buyButton; 
 
     // Called by the slot when clicked
     public void Open(DrillSlot slot)
