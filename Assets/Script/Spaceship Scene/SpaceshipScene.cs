@@ -4,7 +4,7 @@ public class SpaceshipSceneSetup : MonoBehaviour
 {
     void Start()
     {
-        if (MaterialManager.Instance != null)
-            MaterialManager.Instance.canGenerate = false;
+        //if (MaterialManager.Instance != null)
+            //MaterialManager.Instance.canGenerate = false;
     }
 }

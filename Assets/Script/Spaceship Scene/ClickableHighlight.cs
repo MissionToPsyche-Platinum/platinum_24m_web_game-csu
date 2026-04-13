@@ -28,13 +28,13 @@ public class ClickableHighlight : MonoBehaviour
     private int currentLevel = 1;
 
     void Start()
-    {
-        sr = GetComponent<SpriteRenderer>();
-        originalColor = sr.color;
-        upgradePopup.SetActive(false);
-        currentLevel = PlayerPrefs.GetInt("ShipLevel", 1);
-        ApplyLevelSprite();
-    }
+{
+    sr = GetComponent<SpriteRenderer>();
+    originalColor = sr.color;
+    upgradePopup.SetActive(false);
+    currentLevel = PlayerPrefs.GetInt("ShipLevel", 1);
+    ApplyLevelSprite();
+}
 
     void OnMouseEnter() { sr.color = highlightColor; }
     void OnMouseExit() { sr.color = originalColor; }
