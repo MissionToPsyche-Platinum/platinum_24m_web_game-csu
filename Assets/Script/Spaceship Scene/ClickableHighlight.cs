@@ -32,6 +32,8 @@ public class ClickableHighlight : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         originalColor = sr.color;
         upgradePopup.SetActive(false);
+        currentLevel = PlayerPrefs.GetInt("ShipLevel", 1);
+        ApplyLevelSprite();
     }
 
     void OnMouseEnter() { sr.color = highlightColor; }
@@ -101,6 +103,7 @@ public void OnYesClicked()
     DisasterManager.Instance.hasDebt = false; // clear debt on upgrade
 
     currentLevel++;
+    PlayerPrefs.SetInt("ShipLevel", currentLevel);
     switch (currentLevel)
     {
         case 2: sr.sprite = level2Sprite; break;
@@ -120,4 +123,16 @@ public void OnYesClicked()
     {
         upgradePopup.SetActive(false);
     }
+
+    void ApplyLevelSprite()
+{
+    switch (currentLevel)
+    {
+        case 2: sr.sprite = level2Sprite; break;
+        case 3: sr.sprite = level3Sprite; break;
+        case 4: sr.sprite = level4Sprite; break;
+        case 5: sr.sprite = level5Sprite; break;
+    }
 }
+}
+
