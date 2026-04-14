@@ -8617,7 +8617,7 @@ GameObject:
   - component: {fileID: 1962628056}
   - component: {fileID: 1962628055}
   m_Layer: 5
-  m_Name: Win Condition
+  m_Name: Win Condition Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
