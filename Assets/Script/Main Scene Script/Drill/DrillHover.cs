@@ -3,44 +3,38 @@ using UnityEngine.EventSystems;
 
 public class DrillHover : MonoBehaviour
 {
-    public GameObject outline; 
-    private Drill drill;
+    private Renderer rend;
+    private Color originalColor;
 
-    private void Awake()
+    public Color highlightColor = new Color(1f, 0.92f, 0.016f, 1f);
+
+    void Awake()
     {
-        drill = GetComponent<Drill>();
+        // IMPORTANT: go into the animated child
+        rend = transform.Find("animatedDrill_0")
+                        ?.GetComponentInChildren<Renderer>();
 
-        if (outline != null)
-            outline.SetActive(false);
+        if (rend != null)
+            originalColor = rend.material.color;
     }
 
-    private void OnMouseEnter()
+    void OnMouseEnter()
     {
-        if (outline != null)
-            outline.SetActive(true);
-    }
-
-    private void OnMouseExit()
-    {
-        if (outline != null)
-            outline.SetActive(false);
-    }
-
-    private void OnMouseDown()
-    {
-        
         if (EventSystem.current.IsPointerOverGameObject())
             return;
 
-        Debug.Log("Drill clicked!");
+        Debug.Log("HOVER ENTER");
 
-        if (drill == null)
-        {
-            Debug.Log("Drill component is NULL");
-            return;
-        }
+        if (rend != null)
+            rend.material.color = highlightColor;
+        else
+            Debug.LogWarning("Renderer not found");
+    }
 
-        DrillUpgradeUI.Instance.Open(drill);
+    void OnMouseExit()
+    {
+        if (rend != null)
+            rend.material.color = originalColor;
     }
 }
 
