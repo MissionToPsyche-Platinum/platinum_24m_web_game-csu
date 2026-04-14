@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class DrillHover : MonoBehaviour
 {
@@ -27,9 +28,18 @@ public class DrillHover : MonoBehaviour
 
     private void OnMouseDown()
     {
+        
+        if (EventSystem.current.IsPointerOverGameObject())
+            return;
+
         Debug.Log("Drill clicked!");
-        if (drill == null) return;
-        Debug.Log("Drill component is NULL");
+
+        if (drill == null)
+        {
+            Debug.Log("Drill component is NULL");
+            return;
+        }
+
         DrillUpgradeUI.Instance.Open(drill);
     }
 }
