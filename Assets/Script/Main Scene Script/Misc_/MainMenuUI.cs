@@ -8,6 +8,11 @@ public class MainMenuUI : MonoBehaviour
         SceneManager.LoadScene("MiningScene"); // Make sure name matches exactly
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadScene("EndCredits"); // Make sure name matches exactly
+    }
+
     public void QuitGame()
     {
         Debug.Log("QUIT BUTTON CLICKED");
