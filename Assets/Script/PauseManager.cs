@@ -16,16 +16,14 @@ public class PauseManager : MonoBehaviour
         SyncUI();
     }
 
-    // 🔄 Sync slider + text when scene loads
+    
     private void SyncUI()
     {
         if (AudioSettings.instance == null) return;
 
-        float savedVolume = PlayerPrefs.GetFloat("volume", 1f);
-
         if (volumeSlider != null)
         {
-            volumeSlider.SetValueWithoutNotify(savedVolume);
+            volumeSlider.SetValueWithoutNotify(AudioSettings.instance.GetVolume());
         }
 
         UpdateMuteText();
@@ -62,7 +60,7 @@ public class PauseManager : MonoBehaviour
         Application.OpenURL("https://psyche.ssl.berkeley.edu/");
     }
 
-    // 🔇 MUTE BUTTON
+    
     public void ToggleMute()
     {
         if (AudioSettings.instance == null) return;
@@ -71,7 +69,7 @@ public class PauseManager : MonoBehaviour
         UpdateMuteText();
     }
 
-    // 🎚 SLIDER
+   
     public void SetVolume(float value)
     {
         if (AudioSettings.instance == null) return;
@@ -79,7 +77,7 @@ public class PauseManager : MonoBehaviour
         AudioSettings.instance.SetVolume(value);
     }
 
-    // 🔊 MUTE TEXT
+    
     public void UpdateMuteText()
     {
         if (AudioSettings.instance == null || muteText == null) return;

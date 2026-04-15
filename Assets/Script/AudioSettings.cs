@@ -30,6 +30,7 @@ public class AudioSettings : MonoBehaviour
         SetVolume(saved);
     }
 
+    // 🎚 SET VOLUME
     public void SetVolume(float value)
     {
         lastVolume = value;
@@ -40,19 +41,42 @@ public class AudioSettings : MonoBehaviour
             ApplyVolume(value);
     }
 
+    // 🔇 TOGGLE MUTE
     public void ToggleMute()
     {
         isMuted = !isMuted;
 
         if (isMuted)
+        {
             mixer.SetFloat("MasterVolume", -80f);
+        }
         else
+        {
             ApplyVolume(lastVolume);
+        }
     }
 
+    
     void ApplyVolume(float value)
     {
         value = Mathf.Clamp(value, 0.0001f, 1f);
         mixer.SetFloat("MasterVolume", Mathf.Log10(value) * 20);
+    }
+
+    
+    public float GetVolume()
+    {
+        return PlayerPrefs.GetFloat("volume", 1f);
+    }
+
+   
+    public void SetMuteInstant(bool mute)
+    {
+        isMuted = mute;
+
+        if (mute)
+            mixer.SetFloat("MasterVolume", -80f);
+        else
+            ApplyVolume(lastVolume);
     }
 }
