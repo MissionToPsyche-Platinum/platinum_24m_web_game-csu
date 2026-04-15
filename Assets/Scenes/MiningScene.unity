@@ -2600,7 +2600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &458219088
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2808,6 +2808,12 @@ MonoBehaviour:
   asteroidSlotManager: {fileID: 1044621062}
   victorySceneName: VictoryScene
   winConditionGUI: {fileID: 982013234}
+  drillProgressBox: {fileID: 1070072617}
+  shipLevelBox: {fileID: 107820189}
+  creditsBox: {fileID: 1164740115}
+  winButton: {fileID: 1165175139}
+  metSprite: {fileID: 2610264574929277808, guid: 60d2ec0f3e9544f489720a01e7961dab, type: 3}
+  notMetSprite: {fileID: -147501672192922659, guid: b62bd5db241ef9643968b4b9a10dc197, type: 3}
 --- !u!1 &487666615
 GameObject:
   m_ObjectHideFlags: 0
@@ -4956,14 +4962,14 @@ RectTransform:
   m_GameObject: {fileID: 979227702}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7661875, y: 1.835, z: 1.835}
+  m_LocalScale: {x: 0.9624999, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 982013235}
+  m_Father: {fileID: 1165175138}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 130, y: -144}
+  m_AnchoredPosition: {x: 71.20834, y: 11.95639}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &979227704
@@ -5101,7 +5107,6 @@ RectTransform:
   - {fileID: 1847644325}
   - {fileID: 1687057361}
   - {fileID: 1165175138}
-  - {fileID: 979227703}
   - {fileID: 1442573311}
   m_Father: {fileID: 1962628054}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6142,7 +6147,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.835, y: 1.835, z: 1.835}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 979227703}
   m_Father: {fileID: 982013235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6193,7 +6199,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1165175140}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 475815055}
+        m_TargetAssemblyTypeName: WinConditionButton, Assembly-CSharp
+        m_MethodName: ConfirmWin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1165175140
 MonoBehaviour:
   m_ObjectHideFlags: 0
