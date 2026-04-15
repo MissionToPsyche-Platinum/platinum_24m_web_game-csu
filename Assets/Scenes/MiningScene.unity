@@ -2333,6 +2333,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 473365151}
   m_CullTransparentMesh: 1
+--- !u!1 &475815053
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 475815054}
+  - component: {fileID: 475815055}
+  m_Layer: 0
+  m_Name: WinManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &475815054
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475815053}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1330.5763, y: 521.64764, z: 0}
+  m_LocalScale: {x: 3.6372097, y: 6.1181774, z: 0.98600453}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1962628054}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &475815055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475815053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b224f312e2b44e5bbb68385b7d7e3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WinConditionButton
+  asteroidSlotManager: {fileID: 1044621062}
+  victorySceneName: VictoryScene
+  winConditionGUI: {fileID: 982013234}
 --- !u!1 &489904707
 GameObject:
   m_ObjectHideFlags: 0
@@ -8946,6 +8993,7 @@ RectTransform:
   m_Children:
   - {fileID: 982013235}
   - {fileID: 1847566944}
+  - {fileID: 475815054}
   m_Father: {fileID: 434204449}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -8996,7 +9044,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1962628056}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 475815055}
+        m_TargetAssemblyTypeName: WinConditionButton, Assembly-CSharp
+        m_MethodName: CheckWinCondition
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1962628056
 MonoBehaviour:
   m_ObjectHideFlags: 0
