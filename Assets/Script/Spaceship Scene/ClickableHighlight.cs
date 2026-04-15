@@ -81,43 +81,50 @@ public class ClickableHighlight : MonoBehaviour
     upgradePopup.SetActive(true);
 }
 
-public void OnYesClicked()
-{
-    int nextIndex = currentLevel - 1;
-    int requiredMaterials = materialCosts[nextIndex];
-    int requiredCurrency = currencyCosts[nextIndex];
-
-    if (DisasterManager.Instance.hasDebt)
-        requiredCurrency += DisasterManager.Instance.repairCost;
-
-    if (MaterialManager.Instance.materials < requiredMaterials ||
-        CurrencyManager.Instance.currency < requiredCurrency)
+    public void OnYesClicked()
     {
-        Debug.Log("Not enough resources to upgrade!");
+        int nextIndex = currentLevel - 1;
+        int requiredMaterials = materialCosts[nextIndex];
+        int requiredCurrency = currencyCosts[nextIndex];
+
+        if (DisasterManager.Instance.hasDebt)
+            requiredCurrency += DisasterManager.Instance.repairCost;
+
+        if (MaterialManager.Instance.materials < requiredMaterials ||
+            CurrencyManager.Instance.currency < requiredCurrency)
+        {
+            Debug.Log("Not enough resources to upgrade!");
+            upgradePopup.SetActive(false);
+            return;
+        }
+
+        MaterialManager.Instance.SpendMaterial(requiredMaterials);
+        CurrencyManager.Instance.SpendCurrency(requiredCurrency);
+        DisasterManager.Instance.hasDebt = false; // clear debt on upgrade
+
+        currentLevel++;
+        PlayerPrefs.SetInt("ShipLevel", currentLevel);
+        switch (currentLevel)
+        {
+            case 2: sr.sprite = level2Sprite; break;
+            case 3: sr.sprite = level3Sprite; break;
+            case 4: sr.sprite = level4Sprite; break;
+            case 5: sr.sprite = level5Sprite; break;
+        }
+
         upgradePopup.SetActive(false);
-        return;
+        sr.color = originalColor;
+
+        if (mainCamera != null)
+            if (currentLevel == 5)
+            {
+                mainCamera.orthographicSize += zoomStep * 12f; ; // zoom out for level 5
+            }
+            else
+            {
+                mainCamera.orthographicSize += zoomStep;
+            }
     }
-
-    MaterialManager.Instance.SpendMaterial(requiredMaterials);
-    CurrencyManager.Instance.SpendCurrency(requiredCurrency);
-    DisasterManager.Instance.hasDebt = false; // clear debt on upgrade
-
-    currentLevel++;
-    PlayerPrefs.SetInt("ShipLevel", currentLevel);
-    switch (currentLevel)
-    {
-        case 2: sr.sprite = level2Sprite; break;
-        case 3: sr.sprite = level3Sprite; break;
-        case 4: sr.sprite = level4Sprite; break;
-        case 5: sr.sprite = level5Sprite; break;
-    }
-
-    upgradePopup.SetActive(false);
-    sr.color = originalColor;
-
-    if (mainCamera != null)
-        mainCamera.orthographicSize += zoomStep;
-}
 
     public void OnNoClicked()
     {
