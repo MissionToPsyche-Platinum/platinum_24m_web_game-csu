@@ -45,7 +45,7 @@ public class WinConditionButton : MonoBehaviour
         }
 
         // If all conditions are met
-        SceneManager.LoadScene(victorySceneName);
+SceneManager.LoadScene(4);
     }
 
     void ShowWinConditionGUI()
