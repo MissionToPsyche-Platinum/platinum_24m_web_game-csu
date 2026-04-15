@@ -243,7 +243,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -32.467438, y: 0, z: 0, w: 0}
+  m_margin: {x: -185.56857, y: 0, z: -111.34631, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -779,7 +779,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Produced by\n\n\t\tGame Assets\n\nImages Sprite:\n\nIn Game Assets:\n\n"
+  m_text: "\tProduced by\n\nTeam Leader\t  Nathan J. Esber\nDeveloper       Dante
+    Hampton\nDeveloper  \t     Mohammed LNU\nDeveloper        Sai Nithin \n\n\n\t\t\n\n\tIn
+    Game Assets:\n\nVisuals\npixelart Drill     \nwww.pixilart.com\n\npixelart Lightning    
+    diluck\nwww.freepik.com\n\n8-bit-retro-iron-drill    Ignite Marketplace\nwww.vecteezy.com\n\n8-bit-retro-golden-drill  
+    Ignite Marketplace\nwww.vecteezy.com\n\n2d-spaceships    MSGDI   \nassetstore.unity.com\n\npixel-art-starships   
+    Daniel Kole Productions\nassetstore.unity.com\n\n2d-pixel-asteroids   EVPO Games\nassetstore.unity.com\n\ngui-cyberpunk-pixelart
+    \ncraftpix.net\n\nhttps://psyche.ssl.berkeley.edu/\n\n\nAudio\nsci-fi-ui-sound-effects:
+    Hoveaudio\nassetstore.unity.com\n\n30 Sci-fi Space Tracks:  alkakrab\nassetstore.unity.com\n\n\n\n\n\tNotable
+    Organizations\n\n\nCleveland State University\n\nArizona State University\n\n\n\tAnd
+    of course....\n\nThe National Aeronautics and Space Administration\n\n\t\tNasa"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2ae6ea804fa75644cba4d670bd6310c3, type: 2}
   m_sharedMaterial: {fileID: 4632016356824421732, guid: 2ae6ea804fa75644cba4d670bd6310c3, type: 2}
@@ -845,7 +854,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -62.77043, y: 0, z: -218.61417, w: 0}
+  m_margin: {x: -248.92749, y: 0, z: -333.4399, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
