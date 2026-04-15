@@ -15,8 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/SpaceshipScene.unity
     guid: b73f9de21376e45aeb30abbb70807a73
   - enabled: 1
-    path: Assets/Pixel Skies DEMO/VictoryScene .unity
-    guid: 2b37081a7f7fd4a06adcd8228f9264db
+    path: Assets/Scenes/EndCredits.unity
+    guid: 9d7a76c1045e04b4cb90a8b9cdb4d8d2
+  - enabled: 1
+    path: Assets/Scenes/VictoryScene .unity
+    guid: d048c706caf494441923a79840ab7e0e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

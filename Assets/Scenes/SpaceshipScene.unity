@@ -713,8 +713,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8158715aa6fc941678fdd08f290c8569, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DisasterManager
-  minInterval: 10
-  maxInterval: 15
+  minInterval: 300
+  maxInterval: 420
   repairCost: 500
   disasterActive: 0
   hasDebt: 0

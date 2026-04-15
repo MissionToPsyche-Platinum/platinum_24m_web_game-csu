@@ -6,8 +6,8 @@ public class DisasterManager : MonoBehaviour
     public static DisasterManager Instance;
 
     [Header("Disaster Settings")]
-    public float minInterval = 10f; // 5 min
-    public float maxInterval = 15f; // 7 min
+    public float minInterval = 300f; // 5 min
+    public float maxInterval = 420f; // 7 min
     public int repairCost = 500;
 
     public bool disasterActive = false;
