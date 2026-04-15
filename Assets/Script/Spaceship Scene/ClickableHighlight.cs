@@ -1,14 +1,17 @@
 using UnityEngine;
-using UnityEngine.UI;  // for Button
-using TMPro;           // for TMP_Text
+using UnityEngine.UI;
+using TMPro;
 
 public class ClickableHighlight : MonoBehaviour
 {
     private SpriteRenderer sr;
     public Color highlightColor = new Color(1f, 0.92f, 0.016f, 1f);
     private Color originalColor;
+
     public Camera mainCamera;
     public float zoomStep = 1.5f;
+
+    private const string CameraZoomKey = "CameraZoom";
 
     [Header("Upgrade Sprites (Level 2 to 5)")]
     public Sprite level2Sprite;
@@ -17,24 +20,32 @@ public class ClickableHighlight : MonoBehaviour
     public Sprite level5Sprite;
 
     [Header("Upgrade Costs")]
-    public int[] materialCosts = { 100, 500, 1000, 50000 }; // levels 2-5
+    public int[] materialCosts = { 100, 500, 1000, 50000 };
     public int[] currencyCosts = { 1500, 5000, 20000, 50000 };
 
     [Header("Popup")]
     public GameObject upgradePopup;
-    public TMP_Text upgradeCostText;  
+    public TMP_Text upgradeCostText;
     public Button yesButton;
 
     private int currentLevel = 1;
 
     void Start()
-{
-    sr = GetComponent<SpriteRenderer>();
-    originalColor = sr.color;
-    upgradePopup.SetActive(false);
-    currentLevel = PlayerPrefs.GetInt("ShipLevel", 1);
-    ApplyLevelSprite();
-}
+    {
+        sr = GetComponent<SpriteRenderer>();
+        originalColor = sr.color;
+
+        upgradePopup.SetActive(false);
+
+        currentLevel = PlayerPrefs.GetInt("ShipLevel", 1);
+        ApplyLevelSprite();
+
+        // RESTORE CAMERA ZOOM WHEN ENTERING SCENE
+        if (mainCamera != null)
+        {
+            mainCamera.orthographicSize = PlayerPrefs.GetFloat(CameraZoomKey, mainCamera.orthographicSize);
+        }
+    }
 
     void OnMouseEnter() { sr.color = highlightColor; }
     void OnMouseExit() { sr.color = originalColor; }
@@ -54,32 +65,34 @@ public class ClickableHighlight : MonoBehaviour
     }
 
     private void ShowUpgradePopup()
-{
-    if (currentLevel >= 5)
     {
-        Debug.Log("Ship is already at max level!");
-        upgradePopup.SetActive(false);
-        return;
+        if (currentLevel >= 5)
+        {
+            Debug.Log("Ship is already at max level!");
+            upgradePopup.SetActive(false);
+            return;
+        }
+
+        int nextIndex = currentLevel - 1;
+        int nextMaterialCost = materialCosts[nextIndex];
+        int nextCurrencyCost = currencyCosts[nextIndex];
+
+        if (DisasterManager.Instance.hasDebt)
+            nextCurrencyCost += DisasterManager.Instance.repairCost;
+
+        if (DisasterManager.Instance.hasDebt)
+            upgradeCostText.text = $"Upgrade your ship for {nextCurrencyCost} credits (includes {DisasterManager.Instance.repairCost} repair debt) and {nextMaterialCost} materials.";
+        else
+            upgradeCostText.text = $"Upgrade your ship for {nextCurrencyCost} credits and {nextMaterialCost} materials.";
+
+        bool canAfford =
+            MaterialManager.Instance.materials >= nextMaterialCost &&
+            CurrencyManager.Instance.currency >= nextCurrencyCost;
+
+        yesButton.interactable = canAfford;
+
+        upgradePopup.SetActive(true);
     }
-
-    int nextIndex = currentLevel - 1;
-    int nextMaterialCost = materialCosts[nextIndex];
-    int nextCurrencyCost = currencyCosts[nextIndex];
-
-    if (DisasterManager.Instance.hasDebt)
-        nextCurrencyCost += DisasterManager.Instance.repairCost;
-
-    if (DisasterManager.Instance.hasDebt)
-        upgradeCostText.text = $"Upgrade your ship for {nextCurrencyCost} credits (includes {DisasterManager.Instance.repairCost} repair debt) and {nextMaterialCost} materials.";
-    else
-        upgradeCostText.text = $"Upgrade your ship for {nextCurrencyCost} credits and {nextMaterialCost} materials.";
-
-    bool canAfford = MaterialManager.Instance.materials >= nextMaterialCost &&
-                     CurrencyManager.Instance.currency >= nextCurrencyCost;
-    yesButton.interactable = canAfford;
-
-    upgradePopup.SetActive(true);
-}
 
     public void OnYesClicked()
     {
@@ -100,10 +113,12 @@ public class ClickableHighlight : MonoBehaviour
 
         MaterialManager.Instance.SpendMaterial(requiredMaterials);
         CurrencyManager.Instance.SpendCurrency(requiredCurrency);
-        DisasterManager.Instance.hasDebt = false; // clear debt on upgrade
+
+        DisasterManager.Instance.hasDebt = false;
 
         currentLevel++;
         PlayerPrefs.SetInt("ShipLevel", currentLevel);
+
         switch (currentLevel)
         {
             case 2: sr.sprite = level2Sprite; break;
@@ -116,14 +131,23 @@ public class ClickableHighlight : MonoBehaviour
         sr.color = originalColor;
 
         if (mainCamera != null)
+        {
+            float currentZoom = mainCamera.orthographicSize;
+
             if (currentLevel == 5)
             {
-                mainCamera.orthographicSize += zoomStep * 12f; ; // zoom out for level 5
+                currentZoom += zoomStep * 12f;
             }
             else
             {
-                mainCamera.orthographicSize += zoomStep;
+                currentZoom += zoomStep;
             }
+
+            mainCamera.orthographicSize = currentZoom;
+
+            // SAVE ZOOM FOR NEXT SCENE
+            PlayerPrefs.SetFloat(CameraZoomKey, currentZoom);
+        }
     }
 
     public void OnNoClicked()
@@ -132,14 +156,14 @@ public class ClickableHighlight : MonoBehaviour
     }
 
     void ApplyLevelSprite()
-{
-    switch (currentLevel)
     {
-        case 2: sr.sprite = level2Sprite; break;
-        case 3: sr.sprite = level3Sprite; break;
-        case 4: sr.sprite = level4Sprite; break;
-        case 5: sr.sprite = level5Sprite; break;
+        switch (currentLevel)
+        {
+            case 2: sr.sprite = level2Sprite; break;
+            case 3: sr.sprite = level3Sprite; break;
+            case 4: sr.sprite = level4Sprite; break;
+            case 5: sr.sprite = level5Sprite; break;
+        }
     }
-}
 }
 
