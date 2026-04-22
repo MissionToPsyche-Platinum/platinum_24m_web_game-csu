@@ -789,7 +789,16 @@ MonoBehaviour:
     Hoveaudio\nassetstore.unity.com\n\n30 Sci-fi Space Tracks:  alkakrab\nassetstore.unity.com\n\n\n\n\n\tNotable
     Organizations\n\n\nCleveland State University\n\nArizona State University\n\n\n\tAnd
     of course....\n\nThe National Aeronautics and Space Administration\n\n\t\tNasa\n\n\n\n\n\t*Disclaimer*\nThis
-    is all set about 120 years in the future"
+    work was created in partial fulfillment of Cleveland State University Capstone
+    Course CIS 494. The work is a result of the Psyche Student Collaborations component
+    of NASA\u2019s Psyche Mission (https://psyche.ssl.berkeley.edu). \u201CPsyche:
+    A Journey to a Metal World\u201D [Contract number NNM16AA09C] is part of the
+    NASA Discovery Program mission to solar system targets. Trade names and trademarks
+    of ASU and NASA are used in this work for identification only. Their usage does
+    not constitute an official endorsement, either expressed or implied, by Arizona
+    State University or National Aeronautics and Space Administration. The content
+    is solely the responsibility of the authors and does not necessarily represent
+    the official views of ASU or NASA.\n\nThanks!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2ae6ea804fa75644cba4d670bd6310c3, type: 2}
   m_sharedMaterial: {fileID: 4632016356824421732, guid: 2ae6ea804fa75644cba4d670bd6310c3, type: 2}
