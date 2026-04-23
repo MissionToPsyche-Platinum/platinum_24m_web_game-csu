@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+//Keeps track of all drills and their levels, generates materials over time based on drill speed and depth across all the scenes. 
+//This helps the win conditions and ensure that the drills wont despanwn when the player reloads the scene.
+
 public class DrillManager : MonoBehaviour
 {
     public static DrillManager Instance;

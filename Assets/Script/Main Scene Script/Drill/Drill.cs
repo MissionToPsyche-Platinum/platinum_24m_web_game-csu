@@ -1,4 +1,6 @@
 using UnityEngine;
+//This script is attached to each drill in the game. It handles the drill's speed and depth levels, generates materials over time , and
+//manages the upgrade system for both speed and depth. It also interacts with the DrillManager to save and load drill data across scenes.
 
 public class Drill : MonoBehaviour
 {

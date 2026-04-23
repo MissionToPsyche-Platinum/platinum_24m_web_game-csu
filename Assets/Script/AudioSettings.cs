@@ -30,7 +30,7 @@ public class AudioSettings : MonoBehaviour
         SetVolume(saved);
     }
 
-    // 🎚 SET VOLUME
+    //SET VOLUME
     public void SetVolume(float value)
     {
         lastVolume = value;
@@ -41,7 +41,7 @@ public class AudioSettings : MonoBehaviour
             ApplyVolume(value);
     }
 
-    // 🔇 TOGGLE MUTE
+    // TOGGLE MUTE
     public void ToggleMute()
     {
         isMuted = !isMuted;

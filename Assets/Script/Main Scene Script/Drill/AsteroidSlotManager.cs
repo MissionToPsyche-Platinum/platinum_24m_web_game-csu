@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+//This script is responsible for managing the drill slots on the asteroid. It restores drills from saved data and activates the next slot in line when a drill is placed.
+
 public class AsteroidSlotManager : MonoBehaviour
 {
     public List<DrillSlot> slots;
