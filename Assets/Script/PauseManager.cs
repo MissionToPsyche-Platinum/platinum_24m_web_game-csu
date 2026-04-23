@@ -83,7 +83,7 @@ public class PauseManager : MonoBehaviour
         if (AudioSettings.instance == null || muteText == null) return;
 
         muteText.text = AudioSettings.instance.IsMuted
-            ? "Unmute Music"
-            : "Mute Music";
+            ? "Unmute"
+            : "Mute Music and Sound";
     }
 }
