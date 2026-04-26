@@ -7,6 +7,7 @@ public class ClickableHighlight : MonoBehaviour
     private SpriteRenderer sr;
     public Color highlightColor = new Color(1f, 0.92f, 0.016f, 1f);
     private Color originalColor;
+    private BoxCollider2D col;
 
     public Camera mainCamera;
     public float zoomStep = 1.5f;
@@ -34,6 +35,8 @@ public class ClickableHighlight : MonoBehaviour
     {
         sr = GetComponent<SpriteRenderer>();
         originalColor = sr.color;
+        col = GetComponent<BoxCollider2D>();
+        Debug.Log("Collider found: " + col);
 
         upgradePopup.SetActive(false);
 
@@ -50,18 +53,30 @@ public class ClickableHighlight : MonoBehaviour
     void OnMouseEnter() { sr.color = highlightColor; }
     void OnMouseExit() { sr.color = originalColor; }
 
-    void Update()
+    void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+        ShowUpgradePopup();
+    }
 
-            if (hit.collider != null && hit.collider.gameObject == gameObject)
-            {
-                ShowUpgradePopup();
-            }
+    void UpdateCollider()
+    {
+        if (currentLevel == 4)
+        {
+            col.size = new Vector2(2.556976f, 4.00575f);
+            Debug.Log("Level: " + currentLevel + " Size: " + col.size);
         }
+        else if (currentLevel == 5)
+        {
+            col.size = new Vector2(6.625673f, 11.77167f);
+            Debug.Log("Level: " + currentLevel + " Size: " + col.size);
+        }
+        else
+        {
+            col.size = new Vector2(2f, 2f);
+        }
+
+        col.offset = Vector2.zero;
+        Physics2D.SyncTransforms();
     }
 
     private void ShowUpgradePopup()
@@ -119,6 +134,7 @@ public class ClickableHighlight : MonoBehaviour
         currentLevel++;
         PlayerPrefs.SetInt("ShipLevel", currentLevel);
 
+
         switch (currentLevel)
         {
             case 2: sr.sprite = level2Sprite; break;
@@ -126,7 +142,7 @@ public class ClickableHighlight : MonoBehaviour
             case 4: sr.sprite = level4Sprite; break;
             case 5: sr.sprite = level5Sprite; break;
         }
-
+        ApplyLevelSprite();
         upgradePopup.SetActive(false);
         sr.color = originalColor;
 
@@ -164,6 +180,9 @@ public class ClickableHighlight : MonoBehaviour
             case 4: sr.sprite = level4Sprite; break;
             case 5: sr.sprite = level5Sprite; break;
         }
+        UpdateCollider();
+        col.enabled = false;
+        col.enabled = true;
     }
 }
 

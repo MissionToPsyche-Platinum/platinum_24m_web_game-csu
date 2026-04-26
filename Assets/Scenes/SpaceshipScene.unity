@@ -272,18 +272,42 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 707289005758027446, guid: daed422fa2c89fa479157c8d6f0a1884, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 31697222}
+      addedObject: {fileID: 31697223}
     - targetCorrespondingSourceObject: {fileID: 707289005758027446, guid: daed422fa2c89fa479157c8d6f0a1884, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 31697223}
+      addedObject: {fileID: 31697224}
   m_SourcePrefab: {fileID: 100100000, guid: daed422fa2c89fa479157c8d6f0a1884, type: 3}
 --- !u!1 &31697221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 707289005758027446, guid: daed422fa2c89fa479157c8d6f0a1884, type: 3}
   m_PrefabInstance: {fileID: 31697220}
   m_PrefabAsset: {fileID: 0}
---- !u!58 &31697222
-CircleCollider2D:
+--- !u!114 &31697223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31697221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a5887cf71d0c43939cefc77e6736f93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  highlightColor: {r: 1, g: 0.92, b: 0.016, a: 1}
+  mainCamera: {fileID: 2050165149}
+  zoomStep: 1.5
+  level2Sprite: {fileID: -2392512568215863503, guid: f32d96da99383db498b3d92d10c5259e, type: 3}
+  level3Sprite: {fileID: -492111648660132467, guid: f32d96da99383db498b3d92d10c5259e, type: 3}
+  level4Sprite: {fileID: -8751620949256052375, guid: f32d96da99383db498b3d92d10c5259e, type: 3}
+  level5Sprite: {fileID: 21300002, guid: c4d8ed7c5adcd0e489c81b34c69fa753, type: 3}
+  materialCosts: 64000000881300001027000050c30000
+  currencyCosts: dc050000204e00003075000050c30000
+  upgradePopup: {fileID: 1159848577}
+  upgradeCostText: {fileID: 397647979}
+  yesButton: {fileID: 1517999540}
+--- !u!61 &31697224
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -317,31 +341,17 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.46875
---- !u!114 &31697223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 31697221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a5887cf71d0c43939cefc77e6736f93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  highlightColor: {r: 1, g: 0.92, b: 0.016, a: 1}
-  mainCamera: {fileID: 2050165149}
-  zoomStep: 1.5
-  level2Sprite: {fileID: -2392512568215863503, guid: f32d96da99383db498b3d92d10c5259e, type: 3}
-  level3Sprite: {fileID: -492111648660132467, guid: f32d96da99383db498b3d92d10c5259e, type: 3}
-  level4Sprite: {fileID: -8751620949256052375, guid: f32d96da99383db498b3d92d10c5259e, type: 3}
-  level5Sprite: {fileID: 21300002, guid: c4d8ed7c5adcd0e489c81b34c69fa753, type: 3}
-  materialCosts: 64000000881300001027000050c30000
-  currencyCosts: dc050000204e00003075000050c30000
-  upgradePopup: {fileID: 1159848577}
-  upgradeCostText: {fileID: 397647979}
-  yesButton: {fileID: 1517999540}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.8125, y: 0.9375}
+    newSize: {x: 0.8125, y: 0.9375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.8125, y: 0.9375}
+  m_EdgeRadius: 0
 --- !u!1 &75429537
 GameObject:
   m_ObjectHideFlags: 0
@@ -9180,8 +9190,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
