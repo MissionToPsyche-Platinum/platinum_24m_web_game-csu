@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     public RectTransform sellTarget;
     public RectTransform spaceshipTarget;
     public RectTransform funFactsTarget;
+    public RectTransform winConditionTarget;
 
     [Header("Typing Settings")]
     public float typingSpeed = 0.05f;
@@ -40,9 +41,13 @@ public class DialogueManager : MonoBehaviour
 
         StartDialogue(new string[]
         {
-            "Welcome to Psyche Mining! Your mission is to mine valuable materials from the asteroid Psyche and sell them for profit.",
+            "Welcome Captain! The year is 2100, and humanity has set its sights on the asteroid Psyche, a treasure trove of valuable metals and minerals.",
+            "We have finally made a space drill, capable of extracting these precious resources! You have been tasked with collecting these resources and upgrading the spacecraft",
+            "Lets get you familiar with the controls and the interface.",
+            "Use the drills to gather materials from the asteroid. Once you have enough, you can sell them for credits.",
             "Sell your materials here to earn credits.",
             "Use this button to go to the spaceship scene.",
+            "Check your progress toward victory here.",
             "Click here to read fun facts about the Psyche asteroid!"
         });
     }
@@ -104,24 +109,38 @@ public class DialogueManager : MonoBehaviour
 
         switch (currentStep)
         {
+            // Intro dialogue (no arrow)
             case 0:
+            case 1:
+            case 2:
+            case 3:
                 pointerArrow.gameObject.SetActive(false);
                 if (nextButtonText != null) nextButtonText.text = "Next";
                 break;
 
-            case 1:
+            // Sell button
+            case 4:
                 pointerArrow.gameObject.SetActive(true);
                 MoveArrow(sellTarget, new Vector2(0f, 80f));
                 if (nextButtonText != null) nextButtonText.text = "Next";
                 break;
 
-            case 2:
+            // Spaceship button
+            case 5:
                 pointerArrow.gameObject.SetActive(true);
                 MoveArrow(spaceshipTarget, new Vector2(0f, 80f));
                 if (nextButtonText != null) nextButtonText.text = "Next";
                 break;
 
-            case 3:
+            // Win condition button
+            case 6:
+                pointerArrow.gameObject.SetActive(true);
+                MoveArrow(winConditionTarget, new Vector2(0f, 80f));
+                if (nextButtonText != null) nextButtonText.text = "Next";
+                break;
+
+            // Fun facts button (last step)
+            case 7:
                 pointerArrow.gameObject.SetActive(true);
                 MoveArrow(funFactsTarget, new Vector2(0f, 80f));
                 if (nextButtonText != null) nextButtonText.text = "Finish";
