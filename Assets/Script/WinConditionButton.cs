@@ -8,10 +8,15 @@ public class WinConditionButton : MonoBehaviour
 
     public string victorySceneName = "VictoryScene";
     public GameObject winConditionGUI;
+    public GameObject winText;
 
     public Image drillProgressBox;
     public Image shipLevelBox;
     public Image creditsBox;
+    public Image drillCheckIcon;
+    public Image shipCheckIcon;
+    public Image creditsCheckIcon;
+
 
     public Button winButton;
 
@@ -64,9 +69,9 @@ public class WinConditionButton : MonoBehaviour
         cachedState.creditsMet = CurrencyManager.Instance.currency >= 100000;
 
         // UPDATE UI
-        SetBox(drillProgressBox, cachedState.drillComplete);
-        SetBox(shipLevelBox, cachedState.shipMet);
-        SetBox(creditsBox, cachedState.creditsMet);
+        SetBox(drillProgressBox, drillCheckIcon, cachedState.drillComplete);
+        SetBox(shipLevelBox, shipCheckIcon, cachedState.shipMet);
+        SetBox(creditsBox, creditsCheckIcon, cachedState.creditsMet);
 
         // SHOW UI
         if (winConditionGUI != null)
@@ -80,6 +85,14 @@ public class WinConditionButton : MonoBehaviour
                 cachedState.shipMet &&
                 cachedState.creditsMet;
         }
+        bool allMet =
+    cachedState.drillComplete &&
+    cachedState.shipMet &&
+    cachedState.creditsMet;
+
+        // WIN TEXT TOGGLE
+        if (winText != null)
+            winText.SetActive(allMet);
     }
 
     public void ConfirmWin()
@@ -92,11 +105,16 @@ public class WinConditionButton : MonoBehaviour
         }
     }
 
-    private void SetBox(Image box, bool met)
+    private void SetBox(Image box, Image icon, bool met)
     {
         if (box != null)
         {
             box.sprite = met ? metSprite : notMetSprite;
+        }
+
+        if (icon != null)
+        {
+            icon.gameObject.SetActive(met);
         }
     }
 }
