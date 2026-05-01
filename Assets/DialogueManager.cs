@@ -5,6 +5,9 @@ using System.Collections.Generic;
 
 public class DialogueManager : MonoBehaviour
 {
+    // WebGL refresh preserves PlayerPrefs, so tutorial completion must be session-only.
+    private static bool TutorialDoneThisSession = false;
+
     [Header("Tutorial UI")]
     public GameObject dialoguePanel;
     public TMP_Text dialogueText;
@@ -27,7 +30,7 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        if (PlayerPrefs.GetInt("TutorialDone", 0) == 1)
+        if (TutorialDoneThisSession)
         {
             dialoguePanel.SetActive(false);
 
@@ -178,8 +181,7 @@ public class DialogueManager : MonoBehaviour
 
         Time.timeScale = 1f;
 
-        PlayerPrefs.SetInt("TutorialDone", 1);
-        PlayerPrefs.Save();
+        TutorialDoneThisSession = true;
 
         Debug.Log("Tutorial Finished");
     }
